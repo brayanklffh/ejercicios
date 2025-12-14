@@ -1,6 +1,13 @@
+let numero1=Number(prompt("ingrese un numero"));
 
+if(numero1%2===0){
+   
+    console.log(`el numero ${numero1} es par `);
+}else{
+    console.log(`el numero ${numero1} es impar `);} //numero par o impar ejercicio 3
 
-const Numeroprimo=3;
+//ejercicio 4
+    const Numeroprimo=3;
 
 const guardarNumero=numero=> `el numero ingresado es ${numero}`;
 
@@ -12,7 +19,7 @@ if(Numeroprimo%1===Numeroprimo&&Numeroprimo%Numeroprimo===1){
 
     console.log(guardarNumero(Numeroprimo)+ " no es un numero primo")
 }
-
+//ejercicio 5
 for (let i = 1; i <= 1000; i++) {
 
     if (i % 2 === 0) {
