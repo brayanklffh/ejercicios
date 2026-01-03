@@ -1,34 +1,278 @@
-let numero1=Number(prompt("ingrese un numero"));
+const numeroIngresado=prompt('ingrese el numero que desea decrementar')
 
-if(numero1%2===0){
+const decremento=()=>{
+	 for(let i=numeroIngresado; i>=1; i--){
 
-    console.log(`el numero ${numero1} es par `);
-}else{
-    console.log(`el numero ${numero1} es impar `);}// numero par o impar ejercicio
+	console.log(`el numero es: ${i}`)
+ };
+}
+decremento();
 
 
 
-//ejercicio 4
-    const Numeroprimo=3;
 
-const guardarNumero=numero=> `el numero ingresado es ${numero}`;
+   
+const paises = () => {
+    const countries = [
+	"Afganistán",
+	"Albania",
+	"Alemania",
+	"Andorra",
+	"Angola",
+	"Antigua y Barbuda",
+	"Arabia Saudita",
+	"Argelia",
+	"Argentina",
+	"Armenia",
+	"Australia",
+	"Austria",
+	"Azerbaiyán",
+	"Bahamas",
+	"Bangladés",
+	"Barbados",
+	"Baréin",
+	"Bélgica",
+	"Belice",
+	"Benín",
+	"Bielorrusia",
+	"Birmania",
+	"Bolivia",
+	"Bosnia y Herzegovina",
+	"Botsuana",
+	"Brasil",
+	"Brunéi",
+	"Bulgaria",
+	"Burkina Faso",
+	"Burundi",
+	"Bután",
+	"Cabo Verde",
+	"Camboya",
+	"Camerún",
+	"Canadá",
+	"Catar",
+	"Chad",
+	"Chile",
+	"China",
+	"Chipre",
+	"Ciudad del Vaticano",
+	"Colombia",
+	"Comoras",
+	"Corea del Norte",
+	"Corea del Sur",
+	"Costa de Marfil",
+	"Costa Rica",
+	"Croacia",
+	"Cuba",
+	"Dinamarca",
+	"Dominica",
+	"Ecuador",
+	"Egipto",
+	"El Salvador",
+	"Emiratos Árabes Unidos",
+	"Eritrea",
+	"Eslovaquia",
+	"Eslovenia",
+	"España",
+	"Estados Unidos",
+	"Estonia",
+	"Etiopía",
+	"Filipinas",
+	"Finlandia",
+	"Fiyi",
+	"Francia",
+	"Gabón",
+	"Gambia",
+	"Georgia",
+	"Ghana",
+	"Granada",
+	"Grecia",
+	"Guatemala",
+	"Guinea",
+	"Guinea-Bisáu",
+	"Guinea Ecuatorial",
+	"Guyana",
+	"Haití",
+	"Honduras",
+	"Hungría",
+	"India",
+	"Indonesia",
+	"Irak",
+	"Irán",
+	"Irlanda",
+	"Islandia",
+	"Islas Marshall",
+	"Islas Salomón",
+	"Israel",
+	"Italia",
+	"Jamaica",
+	"Japón",
+	"Jordania",
+	"Kazajistán",
+	"Kenia",
+	"Kirguistán",
+	"Kiribati",
+	"Kuwait",
+	"Laos",
+	"Lesoto",
+	"Letonia",
+	"Líbano",
+	"Liberia",
+	"Libia",
+	"Liechtenstein",
+	"Lituania",
+	"Luxemburgo",
+	"Madagascar",
+	"Malasia",
+	"Malaui",
+	"Maldivas",
+	"Malí",
+	"Malta",
+	"Marruecos",
+	"Mauricio",
+	"Mauritania",
+	"México",
+	"Micronesia",
+	"Moldavia",
+	"Mónaco",
+	"Mongolia",
+	"Montenegro",
+	"Mozambique",
+	"Namibia",
+	"Nauru",
+	"Nepal",
+	"Nicaragua",
+	"Níger",
+	"Nigeria",
+	"Noruega",
+	"Nueva Zelanda",
+	"Omán",
+	"Países Bajos",
+	"Pakistán",
+	"Palaos",
+	"Panamá",
+	"Papúa Nueva Guinea",
+	"Paraguay",
+	"Perú",
+	"Polonia",
+	"Portugal",
+	"Reino Unido",
+	"República Centroafricana",
+	"República Checa",
+	"República del Congo",
+	"República Democrática del Congo",
+	"República Dominicana",
+	"Ruanda",
+	"Rumania",
+	"Rusia",
+	"Samoa",
+	"San Cristóbal y Nieves",
+	"San Marino",
+	"San Vicente y las Granadinas",
+	"Santa Lucía",
+	"Santo Tomé y Príncipe",
+	"Senegal",
+	"Serbia",
+	"Seychelles",
+	"Sierra Leona",
+	"Singapur",
+	"Siria",
+	"Somalia",
+	"Sri Lanka",
+	"Sudáfrica",
+	"Sudán",
+	"Sudán del Sur",
+	"Suecia",
+	"Suiza",
+	"Surinam",
+	"Tailandia",
+	"Tanzania",
+	"Tayikistán",
+	"Timor Oriental",
+	"Togo",
+	"Tonga",
+	"Trinidad y Tobago",
+	"Túnez",
+	"Turkmenistán",
+	"Turquía",
+	"Tuvalu",
+	"Ucrania",
+	"Uganda",
+	"Uruguay",
+	"Uzbekistán",
+	"Vanuatu",
+	"Venezuela",
+	"Vietnam",
+	"Yemen",
+	"Yibuti",
+	"Zambia",
+	"Zimbabue",
+]; 
+return countries.map(mayus=>mayus.toUpperCase());
+}; 
+console.log(paises());
 
-if(Numeroprimo%1===Numeroprimo||Numeroprimo%Numeroprimo===1){
 
-    console.log(guardarNumero(Numeroprimo)+ " es un numero primo")
+//3
+const listaPaises = paises();
 
-}else{
+const Capturar=()=>{
+const busqueda = prompt("Ingresa un país o parte del nombre").toLowerCase();
+let coincidencias = [];
 
-    console.log(guardarNumero(Numeroprimo)+ " no es un numero primo")
+for (let i = 0; i < listaPaises.length; i++) {
+  if (listaPaises[i].toLowerCase().includes(busqueda)) {
+    coincidencias.push(listaPaises[i]);
+  }
+};
+return coincidencias.length > 0 ? `Países encontrados: ${coincidencias.join(", ")}`: "No se encontraron países con esa búsqueda";
+};
+console.log(Capturar());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const numero=prompt("ingrese un numero");
+function esCapicua(cadena) {
+    let arr = cadena.split("").reverse().join("");
+  
+   if (cadena===arr) {
+	return `${cadena} es un numero capicua`
+   }else{
+	return `${cadena} no es un numero capicua`
+   }
 }
 
-for (let i = 1; i <= 1000; i++) {
+console.log(esCapicua(numero));
 
-    if (i % 2 === 0) {
-        console.log(i + " es un número par.");
-        
-    } else {
-        
-        console.log(i + " es un número impar.");
-    }
-}
+
+
+
+
+
+
+
+

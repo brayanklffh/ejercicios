@@ -1,4 +1,4 @@
-
+/*
 const NumerosInpares=[];
 const NumerosPares=[];
 const limite=Number(prompt("ingrese un numero limite"));
@@ -47,7 +47,7 @@ const numero=Number(prompt("ingrese un numero para saber si es primo"));
  * Para determinar que un numero es primo, este solo debe ser divisible por 1 y por si mismo.
  * en esta funcion lo que vamos a hacer es determinar si el numero ingresado por parametro tiene mas de un divisor si esta afirmacion es cierta el numero no es primo
  * @param {*} numero 
- */
+ 
 function esNumeroPrimo(numero) {
     debugger;
     if(numero<1){return false;
@@ -63,4 +63,4 @@ function esNumeroPrimo(numero) {
 };
 console.log(`el numero ${numero} es primo? : ${esNumeroPrimo(numero)}`);
 
-
+*/
